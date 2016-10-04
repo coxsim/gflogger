@@ -1,0 +1,10 @@
+apply plugin: 'scala'
+
+dependencies {
+    compile project(':core')
+    compile 'org.scala-lang:scala-library:2.11.8'
+    compile 'org.scala-lang:scala-reflect:2.11.8'
+
+    testCompile project(':core').sourceSets.test.output
+    testCompile group: 'junit', name: 'junit', version: '4.+'
+}
